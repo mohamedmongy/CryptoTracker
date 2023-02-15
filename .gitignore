@@ -1,0 +1,9 @@
+
+# Xcode
+iOSAssessment.xcworkspace/
+xcuserdata/
+build/
+DerivedData/
+
+# Cocoapods
+Pods/
