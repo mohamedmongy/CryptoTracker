@@ -11,8 +11,6 @@ struct HomeView: View {
     @EnvironmentObject private var homeViewModel: HomeViewModel
     @State private var showPortfolio: Bool = false
     
-   
-    
     var body: some View {
         ZStack {
             Color.theme.background
@@ -21,7 +19,6 @@ struct HomeView: View {
             VStack {
                 HomeHeader
                 columnTitles
-                
                 
                 if !showPortfolio {
                    allCoinsList
