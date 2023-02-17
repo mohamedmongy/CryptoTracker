@@ -11,8 +11,8 @@ struct CoinImageView: View {
     
     @StateObject var vm: CoinImageViewModel
     
-    init(urlString: String) {
-        _vm = StateObject(wrappedValue: CoinImageViewModel(urlString: urlString))
+    init(urlString: String, coinId: String) {
+        _vm = StateObject(wrappedValue: CoinImageViewModel(urlString: urlString, coinId: coinId))
     }
     
     var body: some View {
@@ -33,6 +33,6 @@ struct CoinImageView: View {
 
 struct CoinImageView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinImageView(urlString: dev.coin.image)
+        CoinImageView(urlString: dev.coin.image, coinId: dev.coin.id)
     }
 }

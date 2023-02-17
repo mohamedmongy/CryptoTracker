@@ -16,11 +16,13 @@ class CoinImageViewModel: ObservableObject {
     private var coinImageService: CoinImageService
     private var cancellables = Set<AnyCancellable>()
     private var imageUrlString: String
+    private var coinId: String
     
-    init(urlString: String) {
+    init(urlString: String, coinId: String) {
         self.imageUrlString = urlString
-        self.coinImageService = CoinImageService(urlString: urlString)
-        bindToCoinImageService()
+        self.coinId = coinId
+        self.coinImageService = CoinImageService(urlString: urlString, coinId: coinId)
+        self.bindToCoinImageService()
     }
     
     private func bindToCoinImageService() {
